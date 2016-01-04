@@ -359,4 +359,32 @@ fun! todo#Complete(findstart, base)
     endif
 endfun
 
+function! todo#SetupRow()
+  s/^[^>]\+$/& >/g
+endfunction
+
+function! todo#SetupRows()
+  %s/^[^>]\+$/& >/g
+endfunction
+
+function! todo#AddPomodoro()
+  normal $A 🍅
+endfun
+
+function! todo#RemoveLemon()
+  s/>\s\+🍋/>/
+endfun
+
+function! todo#RemovePomodoro()
+  s/🍅\s*$//
+endfun
+
+function! todo#AddLemon()
+  s/>/> 🍋/
+endfun
+
+function! todo#DoPomodoro()
+  call todo#RemoveLemon()
+  call todo#AddPomodoro()
+endfun
 

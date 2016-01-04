@@ -155,6 +155,34 @@ buffers in which they appears in the preview window. It does the same thing
 for context except that it gives in the preview the list of projects existing
 in each existing contexts.
 
+## Pomodoro
+
+We use two icons to distinguish planned pomodori and done pomodori. We'll use
+the term "lemons" to identify planned (and still not worked) pomodori. Ideally,
+the workflow is to plan lemons at the beginning of the day, then convert them
+into pomodori while you work.
+
+Here are the available commands (with respective mappings):
+
++ `<LocalLeader>ts` setup row: adds a `>` marker at the end of the current
+todo, unless already present (mnemonic: todo setup)
++ `<LocalLeader>tS` setup rows: adds a `>` marker at the end of each todo,
+unless already present (mnemonic: todo Setup)
++ `<LocalLeader>tp` add pomodoro: adds a 🍅  to current task (mnemonic: todo
+pomodoro)
++ `<LocalLeader>tP` remove pomodoro: removes a 🍅  from current task (mnemonic:
+todo Pomodoro)
++ `<LocalLeader>tl` add lemon: adds a 🍋  to current task (mnemonic: todo lemon)
++ `<LocalLeader>tL` remove lemon: removes a 🍋  from current task (mnemonic:
+todo Lemon)
++ `<LocalLeader>td` do pomodoro: converts a 🍋  into a 🍅  in current task
+(mnemonic: todo do)
+
+If you also use (and you should) the
+[vim-easy-align](https://github.com/junegunn/vim-easy-align) plugin, you can
+align the `>` markers with `:EasyAlign />/`.
+
+
 ## Hierarchical sort
 
 This fork provides a hierarchical sorting function designed to do by project

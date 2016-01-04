@@ -64,6 +64,14 @@ if !exists("g:Todo_txt_do_not_map")
 
 " Sort by due: date {{{2
     nnoremap <script> <silent> <buffer> <localleader>sd :call todo#SortDue()<CR>
+
+    nnoremap <localleader>ts :call todo#SetupRow()<CR>
+    nnoremap <localleader>tS :call todo#SetupRows()<CR>
+    nnoremap <script> <silent> <buffer> <localleader>tp :call todo#AddPomodoro()<CR>
+    nnoremap <script> <silent> <buffer> <localleader>tP :call todo#RemovePomodoro()<CR>
+    nnoremap <script> <silent> <buffer> <localleader>tl :call todo#AddLemon()<CR>
+    nnoremap <script> <silent> <buffer> <localleader>tL :call todo#RemoveLemon()<CR>
+    nnoremap <script> <silent> <buffer> <localleader>td :call todo#DoPomodoro()<CR>
 endif
 
 " Folding {{{1
